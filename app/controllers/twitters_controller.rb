@@ -13,7 +13,7 @@ class TwittersController < ApplicationController
   end
 
   def show
-    params[:id]
+    @twitter = Twitter.find(params[:id])
   end
 
   private
