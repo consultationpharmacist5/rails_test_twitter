@@ -5,4 +5,8 @@ class TwittersController < ApplicationController
   def new
     @twitter = Twitter.new
   end
+
+  def create
+    Twitter.create(title: params[:blog][:title], content: params[:blog][:content])
+  end
 end
