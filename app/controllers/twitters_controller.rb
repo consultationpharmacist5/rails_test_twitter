@@ -8,6 +8,6 @@ class TwittersController < ApplicationController
 
   def create
     Twitter.create(title: params[:blog][:title], content: params[:blog][:content])
-    redirect_to "/twitters/new"
+    redirect_to new_twitter_path
   end
 end
