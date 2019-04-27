@@ -3,7 +3,7 @@ class TwittersController < ApplicationController
 
   end
 
-  def
+  def new
 
   end
 end
