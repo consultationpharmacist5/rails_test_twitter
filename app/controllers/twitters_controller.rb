@@ -12,6 +12,9 @@ class TwittersController < ApplicationController
     redirect_to new_twitter_path
   end
 
+  def show
+    params[:id]
+  end
 
   private
 
