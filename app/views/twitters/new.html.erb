@@ -1,0 +1,11 @@
+<%= form_with(model: Twitter.new, local: true) do |form| %>
+  <div class="twitter_title">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="twitter_title">
+    <%= form.label :content %>
+    <%= form.text_field :content %>
+  </div>
+  <%= form.submit %>
+<% end %>
