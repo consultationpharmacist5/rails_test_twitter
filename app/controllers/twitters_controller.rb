@@ -25,7 +25,12 @@ class TwittersController < ApplicationController
   end
 
   def update
-
+    @twitter = Twitter.find(params[:id])
+    if @twitter.update(twitter_params)
+      redirect_to twitters_path, notice:"つぶやきを編集しました！"
+    else
+      render 'edit'
+    end
   end
 
   private
