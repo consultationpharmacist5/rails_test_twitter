@@ -33,6 +33,11 @@ class TwittersController < ApplicationController
     end
   end
 
+  def destroy
+    @twitter.destroy
+    redirect_to twitters_path, notice:"つぶやきを削除しました！"
+  end
+
   private
 
   def twitter_params
