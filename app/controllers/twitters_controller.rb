@@ -6,7 +6,11 @@ class TwittersController < ApplicationController
   end
 
   def new
-    @twitter = Twitter.new
+    if params[:back]
+      @twitter = Twitter.new(twitter_params)
+    else
+      @twitter = Twitter.new
+    end
   end
 
   def create
@@ -38,6 +42,9 @@ class TwittersController < ApplicationController
     redirect_to twitters_path, notice:"つぶやきを削除しました！"
   end
 
+  def confirm
+    @twitter = Twitter.new(twitter_params)
+  end
   private
 
   def twitter_params
