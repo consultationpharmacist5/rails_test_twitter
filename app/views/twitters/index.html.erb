@@ -12,6 +12,7 @@
     <td> <% = twitter.content %></td>
     <td><% = link_to '詳細を確認する',twitter_path(twitter.id) %></td>
     <td><% = link_to "つぶやきを編集する", edit_twitter_path(twitter.id)%></td>
+    <td><% = link_to 'ブログを削除する',twitter_path(twitter.id),method: :delete %></td>
   </tr>
 <% end %>
 </table>
