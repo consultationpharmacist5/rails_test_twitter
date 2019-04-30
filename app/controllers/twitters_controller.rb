@@ -20,6 +20,10 @@ class TwittersController < ApplicationController
     @twitter = Twitter.find(params[:id])
   end
 
+  def edit
+
+  end
+
   private
 
   def twitter_params
