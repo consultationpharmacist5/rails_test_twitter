@@ -1,21 +1,17 @@
 <%= form_with(model: @twitter, local: true, url: choose_new_or_edit) do |form| %>
-  <% if @twitter,.errors.any? %>
+  <% if @twitter.errors.any? %>
     <div id="error_explanation">
-      <h2><%= @twitter,.errors.count %>件のエラーがあります。</h2>
+      <h2><%= @twitter.errors.count %>件のエラーがあります。</h2>
       <ul>
 
-      <% @twitter,.errors.full_messages.each do |msg| %>
+      <% @twitter.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="twitter,_title">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
-  <div class="twitter,_title">
+  <div class="twitter_content">
     <%= form.label :content %>
     <%= form.text_field :content %>
   </div>

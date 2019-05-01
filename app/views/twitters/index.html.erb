@@ -1,24 +1,22 @@
 <h1>つぶやき一覧</h1>
 
-<p><% = notice %></p>
+<p><%= notice %></p>
 
 <table>
   <tr>
-    <th>タイトル</th>
-    <th>内容</th>
+    <th>つぶやき</th>
   </tr>
 
 <% @twitters.each do |twitter| %>
   <tr>
-    <td> <% = twitter.title %></td>
-    <td> <% = twitter.content %></td>
-    <td><% = link_to '詳細を確認する',twitter_path(twitter.id) %></td>
-    <td><% = link_to "つぶやきを編集する", edit_twitter_path(twitter.id)%></td>
-    <td><% = link_to 'ブログを削除する',twitter_path(twitter.id),method: :delete ,data:{ confirm: '本当に削除していいですか？'} %></td>
+    <td> <%= twitter.content %></td>
+    <td><%= link_to 'つぶやきを確認する',twitter_path(twitter.id) %></td>
+    <td><%= link_to "つぶやきを編集する", edit_twitter_path(twitter.id)%></td>
+    <td><%= link_to 'つぶやきを削除する',twitter_path(twitter.id),method: :delete ,data:{ confirm: '本当に削除していいですか？'} %></td>
   </tr>
 <% end %>
 </table>
 
 <br>
 
-<% = link_to '新しくつぶやきを投稿する',new_twitter_path %>
+<%= link_to '新しくつぶやきを投稿する',new_twitter_path %>
