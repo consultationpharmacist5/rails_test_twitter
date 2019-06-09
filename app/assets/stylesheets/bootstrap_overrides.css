@@ -1,0 +1,100 @@
+div.topic li {
+  padding: 1% 1%;
+  background-color: #fff;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  margin-bottom: 0px;
+  padding: 5% 5%;
+}
+
+ul.row_A li {
+  color: #294986;
+  font-size: 20px;
+  font-style: italic;
+  background-color: #fff;
+}
+
+@media only screen and (min-width: 1200px) {
+  li.col-sm-6 br {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+li.col-md-6 { width: max-content; }
+}
+
+@media (min-width: 768px){
+  .navbar-collapse.collapse {
+      display: block!important;
+      height: auto!important;
+      padding-bottom: 0;
+      overflow: visible!important;
+  }
+}
+
+ul.row_B li {
+  color: #000;
+  background-color: #fff;
+}
+
+ul.row_C li {
+  color: #294986;
+  background-color: #fff;
+  border-bottom: dotted 0px
+}
+
+a.contents_top {
+  color: #294986;
+  font-size: 20px;
+  font-style: italic;
+}
+
+p.notice {
+  color: red;
+}
+
+p.show {
+  font-size: 20px;
+  text-decoration-line: underline;
+  margin: 100px auto;
+}
+
+th {
+  text-align: center;
+  padding: 0px 10px;
+}
+
+td.tweet_contents {
+  text-align: left;
+  border-bottom: dotted 1px
+}
+
+table td {
+  padding: 0px 10px;
+}
+
+table {
+  margin: 100px auto;
+
+}
+
+div.show_edit {
+  margin: 100px auto;
+}
+
+li.notice {
+  color: red;
+}
+
+p.confirm {
+  font-size: 20px;
+  text-decoration-line: underline;
+  margin: 100px auto;
+}

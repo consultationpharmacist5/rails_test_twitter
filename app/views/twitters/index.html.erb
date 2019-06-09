@@ -1,6 +1,8 @@
-<h1>つぶやき一覧</h1>
+<div class = "container">
 
-<p><%= notice %></p>
+<a class="contents_top">つぶやき一覧</a>
+
+<p class="notice"><%= notice %></p>
 
 <table>
   <tr>
@@ -9,10 +11,13 @@
 
 <% @twitters.each do |twitter| %>
   <tr>
-    <td> <%= twitter.content %></td>
-    <td><%= link_to 'つぶやきを確認する',twitter_path(twitter.id) %></td>
-    <td><%= link_to "つぶやきを編集する", edit_twitter_path(twitter.id)%></td>
-    <td><%= link_to 'つぶやきを削除する',twitter_path(twitter.id),method: :delete ,data:{ confirm: '本当に削除していいですか？'} %></td>
+    <td class="twitter.content"><%= twitter.content %></td>
+    <td class="btn_show">
+    <td><%= link_to 'つぶやきを確認する',twitter_path(twitter.id), class: 'btn btn-info' %></td>
+    <td class="btn_edit">
+    <td><%= link_to "つぶやきを編集する", edit_twitter_path(twitter.id), class: 'btn btn-warning'%></td>
+    <td class="btn_destroy">
+    <td><%= link_to 'つぶやきを削除する',twitter_path(twitter.id), method: :delete ,data:{ confirm: '本当に削除していいですか？'}, class: 'btn btn-danger' %></td>
   </tr>
 <% end %>
 </table>
@@ -20,6 +25,6 @@
 <br>
 
 <div class="link_new">
-<%= link_to '新しくつぶやく',new_twitter_path %>
-<%= link_to 'TOPに戻る', top_twitters_path %>
+<%= link_to '新しくつぶやく',new_twitter_path, class: 'btn btn-success' %>
+<%= link_to 'TOPに戻る', top_twitters_path, class: 'btn btn-default' %>
 </div>

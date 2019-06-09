@@ -1,4 +1,12 @@
-<h2>つぶやく</h2>
+<div class = "container">
 
+<div class="show_edit">
 <%= render 'form' %>
-<%= link_to 'TOPに戻る', top_twitters_path %>
+</div>
+
+<%= form_with(model: @twitter, local: true, method: 'get') do |form| %>
+  <%= link_to 'つぶやき一覧', twitters_path, class: 'btn btn-primary' %>
+  <%= link_to 'TOPに戻る', top_twitters_path, class: 'btn btn-default' %>
+<% end %>
+
+</div>

@@ -1,3 +1,10 @@
-<h1>つぶやき詳細</h1>
-<p>内容: <%= @twitter.content %></p>
-<%= link_to 'TOPに戻る', top_twitters_path %>
+<div class = "container">
+
+<a class="contents_top">つぶやき詳細</a>
+<p class="show">内容: <%= @twitter.content %></p>
+<%= form_with(model: @twitter, local: true, method: 'get') do |form| %>
+  <%= link_to 'つぶやき一覧', twitters_path, class: 'btn btn-primary' %>
+  <%= link_to 'TOPに戻る', top_twitters_path, class: 'btn btn-default' %>
+<% end %>
+
+</div>

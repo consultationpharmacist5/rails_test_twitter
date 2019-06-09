@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>RailsTestTwitter</title>
+    <title>ついクロ</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+    <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#gnavi">
+          <span class="sr-only">bootstrap_task</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand">ついクロ</a>
+      </div>
+
+      <div id="gnavi" class="collapse navbar-collapse">
+        <ul class = "nav navbar-nav">
+          <li class="col-md-4"><a href="/twitters/top">TOP</a></li>
+          <li class="col-md-4"><a href="/twitters">つぶやき一覧</a></li>
+          <li class="col-md-4"><a href="/twitters/new">新しいつぶやき</a></li>
+        </ul>
+      </div>
+    </div>
+    </nav>
+  
   <body>
-    <header class = "header">
-      <ul class = "top_menu clearfix">
-        <li><a href="/twitters/top">TOP</a></li>
-        <li><a href="/twitters">つぶやき一覧</a></li>
-        <li><a href="/twitters/new">新しいつぶやき</a></li>
-      </ul>
-    </header>
-
     <%= yield %>
-
-    <footer class = "footer">
-      <p>test app</p>
-    </footer>
-    
   </body>
+
+  <footer class = "footer">
+    <p>test app</p>
+  </footer>
+
+
 </html>

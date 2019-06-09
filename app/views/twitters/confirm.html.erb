@@ -1,13 +1,16 @@
-<h3>このつぶやきを、送信する。</h3>
+<div class = "container">
+
+<a class="contents_top">このつぶやきを、送信する。</a>
 
 <%= form_with(model: @twitter, url: twitters_path, local: true) do |form| %>
   <%= form.hidden_field :content %>
 
-  <p>本文:<%= @twitter.content %></p>
-  <%= form.submit  "登録する" %>
+  <p class="confirm">つぶやき:<%= @twitter.content %></p>
+  <%= form.submit  "登録する", class: 'btn btn-success' %>
 <% end %>
 
 <%= form_with(model: @twitter, url: new_twitter_path, local: true, method: 'get') do |form| %>
   <%= form.hidden_field :content %>
-  <%= form.submit "もどる", name: 'back' %>
+  <%= form.submit "登録しないで戻る", name: 'back', class: 'btn btn-default' %>
 <% end %>
+</div>

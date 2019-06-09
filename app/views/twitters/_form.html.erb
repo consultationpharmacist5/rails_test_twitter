@@ -1,25 +1,20 @@
 <%= form_with(model: @twitter, local: true, url: choose_new_or_edit) do |form| %>
   <% if @twitter.errors.any? %>
     <div id="error_explanation">
-      <h2><%= @twitter.errors.count %>件のエラーがあります。</h2>
+      <p class="notice"><%= @twitter.errors.count %>件のエラーがあります。</p>
       <ul>
 
       <% @twitter.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+        <li class="notice"><%= msg %></li>
       <% end %>
       </ul>
     </div>
   <% end %>
 
   <div class="twitter_content">
-    <%= form.label :content %>
-    <%= form.text_field :content%>
+    <%= form.label :今の気持ちは〜 %><br>
+    <%= form.text_field :content, :placeholder => "入力して僕に教えて"%><br>
+    <%= form.submit %>
+    <img><%= image_tag 'きゃわわんこ.jpg' %></img>
   </div>
-
-  <div class="link_fuck">
-  <%= form.submit "fuck!!!" %>
-</div>
-
 <% end %>
-
-<%= link_to "つぶやき一覧に戻る", twitters_path %>
